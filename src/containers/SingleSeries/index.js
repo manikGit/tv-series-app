@@ -9,7 +9,7 @@ state = {
 
     componentDidMount(){
         const {id} = this.props.match.params;
-        fetch(`http://api.tvmaze.com/shows/${id}?embed=episodes`)
+        fetch(`https://api.tvmaze.com/shows/${id}?embed=episodes`)
         .then(response =>  response.json())
         .then(json => this.setState({show : json}))
     }
